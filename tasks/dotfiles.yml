@@ -1,0 +1,49 @@
+---
+
+- name: Copy tmux config
+  copy:
+    src: files/dotfiles/.tmux.conf
+    dest: /etc/tmux.conf
+
+- name: Copy fish config (root)
+  copy:
+    src: files/dotfiles/.config/fish/
+    dest: /root/.config/fish/
+    owner: root
+    group: root
+
+- name: Copy fish config (tuetuopay)
+  copy:
+    src: files/dotfiles/.config/fish/
+    dest: /home/tuetuopay/.config/fish/
+    owner: tuetuopay
+    group: tuetuopay
+
+- name: Copy vimrc (root)
+  copy:
+    src: files/dotfiles/.vimrc
+    dest: /root/.vimrc
+    owner: root
+    group: root
+
+- name: Copy vim folder (root)
+  copy:
+    src: files/dotfiles/.vim/
+    dest: /root/.vim/
+    owner: root
+    group: root
+
+- name: Copy vimrc (tuetuopay)
+  copy:
+    src: files/dotfiles/.vimrc
+    dest: /home/tuetuopay/.vimrc
+    owner: tuetuopay
+    group: tuetuopay
+
+- name: Copy vim folder (tuetuopay)
+  copy:
+    src: files/dotfiles/.vim/
+    dest: /home/tuetuopay/.vim/
+    owner: tuetuopay
+    group: tuetuopay
+

@@ -13,3 +13,6 @@
     - name: User config
       include: tasks/user.yml
 
+    - name: Dotfiles
+      include: tasks/dotfiles.yml
+
