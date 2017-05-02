@@ -7,7 +7,7 @@ I use on my servers
 
 Git and ansible needs to be installed (``yum install git ansible``)
 
-    ansible-pull -U https://github.com/Tuetuopay/postinst.git -C ansible --purge -e@/absolute/path/to/local_config.yml
+    ansible-pull -U https://github.com/Tuetuopay/server-ansible.git -C ansible --purge -e@/absolute/path/to/local_config.yml
 
 ### Available variables
 
