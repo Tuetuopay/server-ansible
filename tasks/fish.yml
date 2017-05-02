@@ -1,0 +1,13 @@
+---
+
+- name: Add repo
+  yum_repository:
+    name: fish_shell
+    description: Fish shell repository
+    baseurl: http://download.opensuse.org/repositories/shells:/fish:/release:/2/CentOS_7/
+
+- name: Install fish
+  yum:
+    name: fish
+    state: present
+

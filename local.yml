@@ -7,3 +7,6 @@
     - name: Install packages
       include: tasks/packages.yml
 
+    - name: Install fish
+      include: tasks/fish.yml
+
