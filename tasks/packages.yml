@@ -20,6 +20,11 @@
     name: docker-engine
     state: present
 
+- name: Run docker at boot
+  systemd:
+    name: docker
+    enabled: yes
+
 - name: Setup certbot
   yum:
     name: certbot
