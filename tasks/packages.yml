@@ -10,45 +10,22 @@
     name: epel-release
     state: present
 
-- name: Setup htop
+- name: Setup htop, vim, tmux, docker, certbot, glances, yum-cron
   yum:
-    name: htop
-    state: present
-
-- name: Setup vim
-  yum:
-    name: vim
-    state: present
-
-- name: Setup tmux
-  yum:
-    name: tmux
-    state: present
-
-- name: Setup Docker
-  yum:
-    name: docker
-    state: present
+    name:
+      - htop
+      - vim
+      - tmux
+      - docker
+      - certbot
+      - glances
+      - yum-cron
+    state: latest
 
 - name: Run docker at boot
   systemd:
     name: docker
     enabled: yes
-
-- name: Setup certbot
-  yum:
-    name: certbot
-    state: present
-
-- name: Setup glances
-  yum:
-    name: glances
-    state: present
-
-- name: Setup yum-cron
-  yum:
-    name: yum-cron
-    state: present
 
 - name: Configure yum-cron
   copy:
