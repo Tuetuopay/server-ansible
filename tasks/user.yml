@@ -16,3 +16,8 @@
       - wheel
       - docker
 
+- name: Add it to sudoers
+  lineinfile:
+    path: /etc/sudoers
+    line: 'tuetuopay ALL=(ALL) ALL'
+
