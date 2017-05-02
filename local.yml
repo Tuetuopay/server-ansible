@@ -1,6 +1,9 @@
 #!/usr/bin/ansible-playbook
 
-- hosts: localhost
+- vars_files:
+    - vars/yum.yml
+
+  hosts: localhost
   connection: local
 
   tasks:
