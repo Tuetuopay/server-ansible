@@ -43,6 +43,9 @@
     owner: root
     group: root
 
+- name: Install vim plugins (root)
+  command: vim -c ":PlugInstall | :qa"
+
 - name: Copy vimrc (tuetuopay)
   copy:
     src: files/dotfiles/.vimrc
@@ -56,4 +59,7 @@
     dest: /home/tuetuopay/.vim/
     owner: tuetuopay
     group: tuetuopay
+
+- name: Install vim plugins (tuetuopay)
+  command: su tuetuopay -c 'vim -c ":PlugInstall | :qa"'
 
