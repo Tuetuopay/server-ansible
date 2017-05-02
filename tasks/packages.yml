@@ -22,7 +22,7 @@
 
 - name: Setup Docker
   yum:
-    name: docker-engine
+    name: docker
     state: present
 
 - name: Run docker at boot
