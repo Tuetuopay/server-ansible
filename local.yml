@@ -1,0 +1,9 @@
+#!/usr/bin/ansible-playbook
+
+- hosts: localhost
+  connection: local
+
+  tasks:
+    - name: Install packages
+      include: tasks/packages.yml
+

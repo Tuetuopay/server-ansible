@@ -1,0 +1,27 @@
+---
+
+- name: Setup htop
+  yum:
+    name: htop
+    state: present
+
+- name: Setup vim
+  yum:
+    name: vim
+    state: present
+
+- name: Setup tmux
+  yum:
+    name: tmux
+    state: present
+
+- name: Setup Docker
+  yum:
+    name: docker-engine
+    state: present
+
+- name: Setup certbot
+  yum:
+    name: certbot
+    state: present
+
