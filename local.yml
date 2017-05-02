@@ -16,3 +16,6 @@
     - name: Dotfiles
       include: tasks/dotfiles.yml
 
+    - name: Updates
+      include: tasks/yum-cron.yml
+

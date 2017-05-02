@@ -45,3 +45,14 @@
     name: yum-cron
     state: present
 
+- name: Configure yum-cron
+  copy:
+    src: files/yum-cron.conf
+    dest: /etc/yum/yum-cron.conf
+
+- name: Set yum-cron email address
+  lineinfile:
+    path: /etc/yum/yum-cron.conf
+    regexp: '^email_to'
+    line: 'email_to = {{ email_user }}@{{ email_domain }}'
+
