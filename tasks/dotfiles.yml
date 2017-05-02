@@ -63,3 +63,11 @@
 - name: Install vim plugins (tuetuopay)
   command: su tuetuopay -c 'vim -c ":PlugInstall | :qa"'
 
+- name: Add SSH keys
+  copy:
+    src: files/dotfiles/.ssh/authorized_keys
+    dest: /home/tuetuopay/.ssh/authorized_keys
+    mode: 0600
+    owner: tuetuopay
+    group: tuetuopay
+
