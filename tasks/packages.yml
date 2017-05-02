@@ -1,5 +1,10 @@
 ---
 
+- name: Update all system package
+  yum:
+    name: '*'
+    state: latest
+
 - name: Setup EPEL
   yum:
     name: epel-release
