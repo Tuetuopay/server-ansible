@@ -1,5 +1,10 @@
 ---
 
+- name: Setup EPEL
+  yum:
+    name: epel-release
+    state: present
+
 - name: Setup htop
   yum:
     name: htop
@@ -28,5 +33,15 @@
 - name: Setup certbot
   yum:
     name: certbot
+    state: present
+
+- name: Setup glances
+  yum:
+    name: glances
+    state: present
+
+- name: Setup yum-cron
+  yum:
+    name: yum-cron
     state: present
 
