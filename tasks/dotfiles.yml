@@ -12,12 +12,22 @@
     owner: root
     group: root
 
+- name: File execution rights (root)
+  file:
+    path: /root/.config/fish/dist.sh
+    mode: 0755
+
 - name: Copy fish config (tuetuopay)
   copy:
     src: files/dotfiles/.config/fish/
     dest: /home/tuetuopay/.config/fish/
     owner: tuetuopay
     group: tuetuopay
+
+- name: File execution rights (tuetuopay)
+  file:
+    path: /home/tuetuopay/.config/fish/dist.sh
+    mode: 0755
 
 - name: Copy vimrc (root)
   copy:
