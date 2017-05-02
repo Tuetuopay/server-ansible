@@ -1,0 +1,12 @@
+---
+
+- name: Create my user
+  user:
+    name: tuetuopay
+    generate_ssh_key: yes
+    ssh_key_bits: 4096
+    shell: /usr/bin/fish
+    state: present
+    groups:
+      - wheel
+

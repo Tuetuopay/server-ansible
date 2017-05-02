@@ -10,3 +10,6 @@
     - name: Install fish
       include: tasks/fish.yml
 
+    - name: User config
+      include: tasks/user.yml
+
