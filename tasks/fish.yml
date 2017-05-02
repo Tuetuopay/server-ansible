@@ -5,6 +5,9 @@
     name: fish_shell
     description: Fish shell repository
     baseurl: http://download.opensuse.org/repositories/shells:/fish:/release:/2/CentOS_7/
+    gpgkey: http://download.opensuse.org/repositories/shells:/fish:/release:/2/CentOS_7//repodata/repomd.xml.key
+    gpgcheck: 1
+    enabled: yes
 
 - name: Install fish
   yum:
